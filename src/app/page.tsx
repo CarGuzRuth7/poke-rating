@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 export default async function Home() {
+  //Get API data from Kanto pokedex
   const res = await fetch('https://pokeapi.co/api/v2/pokedex/2');
   const data = await res.json();
   //console.log(data)
@@ -10,7 +11,7 @@ export default async function Home() {
         const pokemon = item.pokemon_species.name
 
         return <Link  key={index}
-                href={`https://img.pokemondb.net/artwork/${pokemon}.jpg`}
+                href={`/pokemon/${pokemon}`}
                 ><li>{pokemon}
                 
                 </li></Link>
