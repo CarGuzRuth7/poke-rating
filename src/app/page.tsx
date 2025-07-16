@@ -1,27 +1,24 @@
-// import Image from "next/image";
-// import styles from "./page.module.css";
-import Link from "next/link";
+import Image from "next/image";
+import styles from "./page.module.css";
+import { Kanto } from "./services/pokeApi";
 
 export default async function Home() {
-  //Get API data from Kanto pokedex
-  const res = await fetch('https://pokeapi.co/api/v2/pokedex/2');
-  const data = await res.json();
-  //console.log(data)
-  const pokemonEntries = data.pokemon_entries.map((item:{ pokemon_species: {name: string}}, index:number)=>{ 
-        const pokemon = item.pokemon_species.name
-
-        return <Link  key={index}
-                href={`/pokemon/${pokemon}`}
-                ><li>{pokemon}
-                
-                </li></Link>
-      })
   return (
-    <div>
-      <h1>{data.name}</h1>
-      <ul>
-        {pokemonEntries}
+    <main>
+      <div className={styles.presentation}>
+        <h1>Pokemon Rating Page</h1>
+        <Image
+        src='/pokeball-png-45330.png'
+        alt="Pokeball"
+        width={100}
+        height={100}
+        />
+        <p>Select a pokemon and rate it!</p>
+      </div>
+        <h2 className={styles.region}>Kanto Region</h2>
+      <ul className={styles.list}>
+        <Kanto/>
       </ul>
-    </div>
+    </main>
   );
 }

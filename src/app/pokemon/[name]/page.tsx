@@ -19,7 +19,6 @@ export default async function PokemonDetails({params}: PokemonPageProps){
         return type.type.name
 
     })
-    console.log(type)
    
     return(
         <main>
@@ -32,11 +31,11 @@ export default async function PokemonDetails({params}: PokemonPageProps){
             width={200}
             height={200}
             />
-            <p>{type.join(', ')}</p>
+            <p>Type: {type.join(', ')}</p>
 
         </div>
         <div>
-            <p>Rate Pokemon</p>
+            <h3>Rate Pokemon</h3>
             <RatePokemon/>
         </div>
         <Link
