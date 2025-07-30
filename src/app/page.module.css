@@ -43,6 +43,10 @@
 .footer, .presentation {
 background-color: rgb(26, 26, 26, .5);
 padding: 1.5rem
+}
+.footer{
+margin-top: 1rem;
+
 
 }
 .sign{
@@ -50,7 +54,32 @@ padding: 1.5rem
   font-size: 1.3rem;
 }
 
-
+/*POkemon detail page*/
+.poke_detail_page{
+padding: 1.1rem 0;
+}
+.image{
+  margin-top: .5rem;
+}
+.types{
+  margin: .5rem;
+}
+.rate_div{
+  margin: 2rem;
+}
+.rating input[type="radio"] {
+  display: none;
+}
+.rating_ball {
+  margin: .2rem;
+}
+.button{
+  border: 1px solid white;
+  padding: .6rem;
+}
+.button:hover{
+  background-color: rgb(26, 26, 26, .5);
+}
 
 @media (max-width: 600px) {
   .page {
