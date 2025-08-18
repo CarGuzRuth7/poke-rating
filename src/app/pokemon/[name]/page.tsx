@@ -38,7 +38,7 @@ export default async function PokemonDetails({params}: PokemonPageProps){
         </div>
         <div className={styles.rate_div}>
             <h3>Rate Pokemon</h3>
-            <RatePokemon/>
+            <RatePokemon name={pokemon.name}/>
         </div>
         <Link
         href='/'
